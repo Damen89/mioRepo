@@ -1,0 +1,55 @@
+<h2>Form Template Driven</h2>
+
+<div class="row">
+  <div class="col-8">
+
+    <form #mioForm="ngForm" (ngSubmit)="onSubmit(mioForm)">
+
+      <!-- Creo un raggruppamento nel form -->
+      <div #userData="ngModelGroup" ngModelGroup="userData">
+
+        <div class="mb-3">
+          <label class="form-label">Nome</label>
+          <input type="text" class="form-control" id="nome"
+          ngModel
+          name="nome"
+          required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Cognome</label>
+          <input type="text" class="form-control" id="cognome"
+          ngModel
+          name="cognome"
+          required>
+        </div>
+      </div>
+
+<!-- Creo un altro gruppo -->
+      <div #userAddress="ngModelGroup" ngModelGroup="userAddress">
+        <div class="mb-3">
+          <label class="form-label">Indirizzo</label>
+          <input type="text" class="form-control" id="indirizzo"
+          ngModel
+          name="indirizzo"
+          required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Città</label>
+          <input type="text" class="form-control" id="citta"
+          ngModel
+          name="citta"
+          required>
+        </div>
+
+      </div>
+
+      <button class="btn btn-primary"  type="submit">Submit</button>
+    </form>
+
+  </div>
+</div>
+
+
+
